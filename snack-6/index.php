@@ -9,14 +9,17 @@ dei voti di ogni alunno. -->
         [
             'name' => 'Luca',
             'lastname' => 'Rossi',
+            'votes' => [6, 5, 8]
         ],
         [
             'name' => 'Giovanni',
             'lastname' => 'Verdi',
+            'votes' => [9, 6, 8]
         ],
         [
             'name' => 'Alessio',
             'lastname' => 'Bianchi',
+            'votes' => [8, 4, 8]
         ]
     ];
 
