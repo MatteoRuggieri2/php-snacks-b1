@@ -41,12 +41,23 @@ gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -->
 <body>
     <main>
         <div class="wrapper">
+
+            <!-- TEACHERS -->
             <div class="teachers">
-                ciao
+                <?php for($i = 0; $i < count($db['teachers']); $i++) { ?>
+                    <div>
+                        <?php echo $db['teachers'][$i]['name'] ?> <?php echo $db['teachers'][$i]['lastname'] ?>
+                    </div>
+                <?php } ?>
             </div>
 
+            <!-- PM -->
             <div class="pm">
-                ciao
+                <?php for($i = 0; $i < count($db['pm']); $i++) { ?>
+                    <div>
+                        <?php echo $db['pm'][$i]['name'] ?> <?php echo $db['pm'][$i]['lastname'] ?>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </main>
