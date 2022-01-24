@@ -23,7 +23,11 @@ suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
         <?php echo $original_paragraph ?>
 
         <h2>Paragrafi separati</h2>
-        
+        <?php for($i = 0; $i < count($separate_paragraph); $i++) { ?>
+            <p>
+                <?php echo trim($separate_paragraph[$i]) ?>
+            </p>
+        <?php } ?>
 
     </main>
 </body>
