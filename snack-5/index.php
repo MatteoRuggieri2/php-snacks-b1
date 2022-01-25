@@ -26,6 +26,10 @@ gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -->
             ]
         ]
     ];
+
+    // Usare queste 2 variabili per rendere il codice sottostante più chiaro.
+    $teachers = $db['teacher'];      
+    $pm = $db['pm'];
  
 ?>
 
@@ -45,8 +49,9 @@ gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -->
             <!-- TEACHERS -->
             <div class="teachers">
                 <?php for($i = 0; $i < count($db['teachers']); $i++) { ?>
+                    <?php $this_teacher = $db['teachers'][$i]; ?>
                     <div>
-                        <?php echo $db['teachers'][$i]['name'] ?> <?php echo $db['teachers'][$i]['lastname'] ?>
+                        <?php echo $this_teacher['name'] ?> <?php echo $this_teacher['lastname'] ?>
                     </div>
                 <?php } ?>
             </div>
@@ -54,8 +59,9 @@ gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -->
             <!-- PM -->
             <div class="pm">
                 <?php for($i = 0; $i < count($db['pm']); $i++) { ?>
+                    <?php $this_pm = $db['pm'][$i]; ?>
                     <div>
-                        <?php echo $db['pm'][$i]['name'] ?> <?php echo $db['pm'][$i]['lastname'] ?>
+                        <?php echo $this_pm['name'] ?> <?php echo $this_pm['lastname'] ?>
                     </div>
                 <?php } ?>
             </div>
