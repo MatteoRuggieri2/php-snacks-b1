@@ -7,7 +7,7 @@ una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riusc
 <?php 
     $user_name = $_GET["name"];
     $user_mail = $_GET["mail"];
-    $user_age = intval($_GET["age"]);
+    $user_age = $_GET["age"];
 
     // Verify User Name
     $verify_user_name = false;
@@ -23,9 +23,7 @@ una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riusc
 
     // Verify User Age
     $verify_user_age = false;
-    if($user_age === 0) {
-        $verify_user_age = false;
-    } else if(is_int($user_age)) {
+    if(is_numeric($user_age)) {
         $verify_user_age = true;
     }
 
