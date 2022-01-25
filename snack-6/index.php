@@ -23,6 +23,8 @@ dei voti di ogni alunno. -->
         ]
     ];
 
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -37,14 +39,15 @@ dei voti di ogni alunno. -->
     <main>
         <h1>Studenti</h1>
         <?php for($i = 0; $i < count($students_array); $i++) { ?>
+            <?php $this_student = $students_array[$i]; ?>
             <h3>
-                <?php echo $students_array[$i]['name'] ?>
-                <?php echo $students_array[$i]['lastname'] ?>
+                <?php echo $this_student['name'] ?>
+                <?php echo $this_student['lastname'] ?>
                 <span>| Media:</span>
 
                 <!-- Faccio la media dei voti -->
                 <?php 
-                    $vote_average = ( array_sum($students_array[$i]['votes']) ) / count($students_array[$i]['votes'])
+                    $vote_average = ( array_sum($this_student['votes']) ) / count($this_student['votes'])
                 ?>
 
                 <!-- Arrotondo e stampo la media dei voti -->
