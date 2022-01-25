@@ -6,7 +6,7 @@ lo stesso numero più di una volta -->
     $numbers_array = [];
 
     while(count($numbers_array) < 15) {
-        $casual_number = rand(1, 15);
+        $casual_number = rand(1, 100);
         if(!in_array($casual_number, $numbers_array)) {
             $numbers_array[] = $casual_number;
         }
