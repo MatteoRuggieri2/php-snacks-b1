@@ -11,4 +11,6 @@ lo stesso numero più di una volta -->
             $numbers_array[] = $casual_number;
         }
     }
+
+    var_dump($numbers_array);
 ?>
