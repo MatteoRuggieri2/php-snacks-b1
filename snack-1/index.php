@@ -54,7 +54,7 @@ Olimpia Milano - Cantù | 55-60 -->
 
                     <!-- Score -->
                     <span>
-                        <?php echo $basketMatches[$i]['visitingTeamScore']; ?>-<?php echo $basketMatches[$i]['visitingTeamScore']; ?>
+                        <?php echo $basketMatches[$i]['homeTeamScore']; ?>-<?php echo $basketMatches[$i]['visitingTeamScore']; ?>
                     </span>
                 </h3>
 
